@@ -259,8 +259,14 @@ public class JWTSigner {
         return mac.doFinal(msg.getBytes());
     }
 
+    /**
+     * Sign an input string using RSA and return the encrypted bytes
+     */
     private static byte[] signRs(final Algorithm algorithm, final String msg, final PrivateKey privateKey) throws NoSuchProviderException,
             NoSuchAlgorithmException, InvalidKeyException, SignatureException {
+        Validate.notNull(algorithm);
+        Validate.notNull(msg);
+        Validate.notNull(privateKey);
         final byte[] messageBytes = msg.getBytes();
         final Signature signature = Signature.getInstance(algorithm.getValue(), "BC");
         signature.initSign(privateKey);
