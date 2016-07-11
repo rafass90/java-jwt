@@ -73,6 +73,12 @@ Yes, here you are:
 </dependency>
 ```
 
+#### Gradle coordinates?
+
+Yes, here you are:
+```json
+compile group: 'com.auth0', name: 'java-jwt', version: '2.1.0'
+```
 
 ### Why another JSON Web Token implementation for Java?
 
