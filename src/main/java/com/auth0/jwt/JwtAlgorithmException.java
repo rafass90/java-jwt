@@ -5,6 +5,7 @@ package com.auth0.jwt;
  */
 public class JWTAlgorithmException extends JWTVerifyException {
 
+
     public JWTAlgorithmException() {}
 
     public JWTAlgorithmException(final String message, final Throwable cause) {
@@ -16,3 +17,4 @@ public class JWTAlgorithmException extends JWTVerifyException {
     }
 
 }
+
